@@ -32,22 +32,25 @@ namespace hotel
             try
             {
 
+                // Get values from TextBoxes
                 string guestName = txtGuestName.Text;
-
-
-
                 int nights = int.Parse(txtNight.Text);
                 double pricePerNight = double.Parse(txtpriceNight.Text);
 
+                // Calculate room cost
                 double roomCost = nights * pricePerNight;
 
+                // Service Tax 
                 double serviceTax = roomCost * 0.10;
 
+                // Discount
                 double discount = roomCost * 0.05;
 
 
+                // Calculate total
                 double totalAmount = roomCost + serviceTax - discount;
 
+                // display result
                 lblServiceTax.Text = serviceTax.ToString();
                 lblDiscount.Text = discount.ToString();
                 lblTotalAmount.Text = totalAmount.ToString();
