@@ -8,3 +8,4 @@ C:\Users\PC\Desktop\hotel\hotel\bin\Debug\hotel.exe
 C:\Users\PC\Desktop\hotel\hotel\bin\Debug\hotel.pdb
 C:\Users\PC\Desktop\hotel\hotel\obj\Debug\hotel.exe
 C:\Users\PC\Desktop\hotel\hotel\obj\Debug\hotel.pdb
+C:\Users\PC\Desktop\hotel\hotel\obj\Debug\hotel.exe.config

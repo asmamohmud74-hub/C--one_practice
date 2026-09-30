@@ -27,36 +27,37 @@ namespace hotel
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-           
 
+
+            try
+            {
 
                 string guestName = txtGuestName.Text;
-                
 
 
-            int nights = int.Parse(txtNight.Text);
+
+                int nights = int.Parse(txtNight.Text);
                 double pricePerNight = double.Parse(txtpriceNight.Text);
 
                 double roomCost = nights * pricePerNight;
 
                 double serviceTax = roomCost * 0.10;
 
-                double discount = 0;
+                double discount = roomCost * 0.05;
 
-                if (roomCost >= 500)
-                {
-                    discount = roomCost * 0.10;
-                }
-                else if (roomCost >= 300)
-                {
-                    discount = roomCost * 0.05;
-                }
 
                 double totalAmount = roomCost + serviceTax - discount;
 
-                lblServiceTax.Text = serviceTax.ToString("0.00");
-                lblDiscount.Text = discount.ToString("0.00");
-                lblTotalAmount.Text = totalAmount.ToString("0.00");
+                lblServiceTax.Text = serviceTax.ToString();
+                lblDiscount.Text = discount.ToString();
+                lblTotalAmount.Text = totalAmount.ToString();
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Soo geli xog saxan");
+            }
+                
             }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -100,6 +101,26 @@ namespace hotel
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
